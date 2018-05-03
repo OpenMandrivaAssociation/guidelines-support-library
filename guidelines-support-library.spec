@@ -10,7 +10,7 @@ Release: 3.%{date}git%{shortcommit0}%{?dist}
 
 License: MIT
 URL: https://github.com/Microsoft/GSL
-Source0: %{url}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
+Source0: %{url}/archive/%{commit0}.tar.gz
 BuildArch: noarch
 
 %description
