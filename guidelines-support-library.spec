@@ -1,6 +1,6 @@
 Name: guidelines-support-library
 Summary: Guidelines Support Library
-Version: 1.0.0
+Version:	2.0.0
 Release: 2%{?dist}
 
 License: MIT
