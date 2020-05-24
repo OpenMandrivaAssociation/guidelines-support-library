@@ -8,6 +8,8 @@ License: MIT
 URL: https://github.com/Microsoft/GSL
 Source0: %{url}/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildArch: noarch
+BuildRequires: ninja
+BuildRequires: cmake
 
 %description
 Header-only %{summary}.
@@ -20,17 +22,20 @@ Provides: %{name}-static = %{version}-%{release}
 %{summary}.
 
 %prep
-%autosetup -n GSL-%{version}
+%autosetup -n GSL-%{version} -p1
 
 %build
-# Nothing to build. Header-only library.
+%cmake -G Ninja \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DGSL_TEST:BOOL=OFF \
+
+%ninja_build
 
 %install
-# Installing headers...
-mkdir -p "%{buildroot}%{_includedir}/"
-cp -ra include/gsl %{buildroot}%{_includedir}/
+%ninja_install -C build
 
 %files devel
 %doc README.md CONTRIBUTING.md
 %license LICENSE ThirdPartyNotices.txt
+%{_datadir}/cmake/Microsoft.GSL/
 %{_includedir}/gsl/
