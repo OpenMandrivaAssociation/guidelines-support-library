@@ -1,7 +1,7 @@
 Name: guidelines-support-library
 Summary: Guidelines Support Library
 # update breaks telegram-desktop
-Version:	3.0.1
+Version:	3.1.0
 Release:	1
 
 License: MIT
