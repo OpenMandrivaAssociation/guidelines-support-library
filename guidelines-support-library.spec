@@ -1,8 +1,7 @@
 Name: guidelines-support-library
 Summary: Guidelines Support Library
-# update breaks telegram-desktop
-Version:	3.1.0
-Release:	2
+Version:	4.1.0
+Release:	1
 
 License: MIT
 URL: https://github.com/Microsoft/GSL
