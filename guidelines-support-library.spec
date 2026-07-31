@@ -1,6 +1,6 @@
 Name: guidelines-support-library
 Summary: Guidelines Support Library
-Version:	4.1.0
+Version:	4.2.2
 Release:	1
 
 License: MIT
@@ -21,7 +21,7 @@ Provides: %{name}-static = %{version}-%{release}
 %{summary}.
 
 %prep
-%autosetup -n GSL-%{version} -p1
+%autosetup -n GSL-4.2.2 -p1
 
 %build
 %cmake -G Ninja \
